@@ -1,13 +1,20 @@
 import { Link } from 'react-router-dom'
 import { FaFacebook } from 'react-icons/fa'
+import logo from '../assets/logo.svg'
 
 const Header = () => {
   return (
-    <header className='flex justify-between px-2 py-1 bg-slate-300/10 sticky top-0'>
+    <header
+      className='
+        flex justify-between items-center px-6 py-1
+        bg-gradient-to-r from-primary to-secondary text-white
+        font-barlow font-semibold text-xl
+        sticky top-0 shadow-md z-10'
+    >
       {/* logo */}
-      <div className='max-w-full w-16'>
+      <div className='max-w-full w-[200px]'>
         <Link to='/'>
-          <img src="./logo.png" alt="logo" />
+          <img src={logo} alt="logo" />
         </Link>
       </div>
       {/* navigation */}

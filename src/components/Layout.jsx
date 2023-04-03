@@ -4,7 +4,7 @@ import Header from './Header'
 
 const Layout = ({children}) => {
   return (
-    <div className='bg-gradient-to-r from-indigo-500 to-blue-500 text-white'>
+    <div className='bg-primary-light text-black'>
       <Header />
       {children}
       <Footer />

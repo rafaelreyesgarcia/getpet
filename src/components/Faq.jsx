@@ -30,7 +30,11 @@ const Faqs = [
     answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
   },
   {
-    question: 'do you work on the weekends or holidays?',
+    question: 'do you work on the holidays?',
+    answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  },
+  {
+    question: 'what about walking in bad weather?',
     answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
   },
 ];

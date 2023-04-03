@@ -1,93 +1,78 @@
 import React from 'react'
 import { FaFacebook } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
+import logo from '../assets/logo.svg'
+import { footerInfo, neighborhoods } from '../constants'
 
 const Footer = () => {
   const apiKey = import.meta.env.VITE_MAPS_KEY;
   return (
-    <footer>
-      <div className='w-[500px] mx-auto hidden sm:block'>
-        <img src="./footer.png" alt="footer" className='w-full object-cover' />
+    <footer className='w-[80%] mx-auto'>
+      <div className='bg-gradient-to-l from-primary to-secondary h-2 my-4 rounded-md'></div>
+
+      <div className='flex justify-between items-center py-8 font-barlow text-3xl font-bold'>
+        <a href='#'><img src={logo} alt="logo" /></a>
+        <Link to="tel:+17087699451">708-769-9451</Link>
+        <Link to='https://www.facebook.com/Petservicesinelmwoodpark'>
+          <FaFacebook />
+        </Link>
+        <Link to="mailto:kelleypetlover@gmail.com">kelleypetlover@gmail.com</Link>
       </div>
 
-      <div className='flex flex-col justify-evenly text-center md:flex-row'>
-        {/* GET IN TOUCH */}
-        <div className='flex-col items-center justify-center gap-4 p-4'>
-          <h2 className='font-heading uppercase text-lg mb-2'>get in touch</h2>
-          <div className='flex justify-center gap-4 md:flex-col'>
-
-            <div>
-              <h3 className='font-heading uppercase'>socials</h3>
-              <Link
-                to="https://www.facebook.com/Petservicesinelmwoodpark"
-                target="_blank"
-              >
-                <FaFacebook className='mx-auto'/>
-              </Link>
+      <div className='flex justify-between items-start'>
+        <div className='flex gap-12'>
+          {footerInfo.map((footerLink, i) => (
+            <div className='flex flex-col'>
+              <h3 className='text-xl font-bold capitalize font-barlow pb-2'>
+                {footerLink.title}
+              </h3>
+              <ul>
+                {footerLink.links.map((link) => (
+                  <a href={link.to}>
+                    <li className='capitalize font-montserrat'>{link.name}</li>
+                  </a>
+                ))}
+              </ul>
             </div>
-
-            <div>
-              <h3 className='font-heading uppercase'>email</h3>
-              <Link to="mailto:kelleypetlover@gmail.com" className='font-body'>kelleypetlover@gmail.com</Link>
-            </div>
-
-            <div>
-              <h3 className='font-heading uppercase'>phone</h3>
-              <Link href="tel:+17087699451">708-769-9451</Link>
-            </div>
-
-          </div>
-        </div>
-
-        {/* SERVICES & HOURS */}
-        <div className='flex flex-col items-center gap-4 p-4'>
-          <div>
-            <h2 className='font-heading uppercase text-lg mb-2'>services</h2>
-
-            <div className='flex gap-4 md:flex-col'>
-              <Link to="/services"className="gradient-link">
-                Dog Walking
-              </Link>
-              <Link to="/services" className="gradient-link">
-                Pet Sitting
-              </Link>
-              <Link to="/services" className="gradient-link">
-                waste cleanups
-              </Link>
-            </div>
-          </div>
+          ))}
 
           <div>
-            <h2 className='font-heading uppercase text-lg mb-2'>Hours</h2>
-            <p><b>Monday - Saturday</b></p>
-            <p><b>10:00am - 4:00pm</b></p>
-          </div>
-        </div>
-        {/* AREA & MAP */}
-        <div className='flex flex-col items-center gap-4 p-4'>
-          <h2 className='font-heading uppercase text-lg'>area</h2>
-          <div className='flex flex-col justify-center items-center gap-4 md:flex-row'>
-            <ul className='hidden md:flex gap-2 capitalize md:flex-col'>
-              <li className='item'>elmwood park</li>
-              <li className='item'>montclare</li>
-              <li className='item'>galewood</li>
-              <li className='item'>river grove</li>
-              <li className='item'>franklin park</li>
+            <h3 className='text-xl font-bold capitalize font-barlow pb-2'>
+              hours
+            </h3>
+            <ul className='font-montserrat'>
+              <li>Monday - Saturday</li>
+              <li>10:00am - 4:00pm</li>
             </ul>
-            <div>
-            <iframe
-              height="250"
-              loading="lazy"
-              allowFullScreen
-              referrerPolicy="no-referrer-when-downgrade"
-              src={`https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=Elmwood+Park,Layden+Township+IL`}
-            >
-            </iframe>
-            </div>
           </div>
         </div>
+
+        <div className='flex gap-4 items-center'>
+          <ul
+            className='
+              font-montserrat capitalize font-medium
+              bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text
+            '
+          >
+            <li>elmwood park</li>
+            {neighborhoods.map(neighborhood => (
+              <li>{neighborhood}</li>
+            ))}
+          </ul>
+          <iframe
+            height="200"
+            width='500'
+            loading="lazy"
+            allowFullScreen
+            referrerPolicy="no-referrer-when-downgrade"
+            src={`https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=Elmwood+Park,Layden+Township+IL`}
+          >
+          </iframe>
+        </div>
+
       </div>
-      <div className='text-center pt-4'>&#169; 2023 GetPet Elmwood Park, Chicago, Il</div>
+
+      <div className='text-center pt-4'>&#169; 2023 GetPet Elmwood Park, Chicago, IL</div>
     </footer>
   )
 }
