@@ -4,19 +4,19 @@ export const footerInfo = [
     links: [
       {
         name: "home",
-        to: "#",
+        to: "",
       },
       {
         name: "about",
-        to: "#about",
+        to: "about",
       },
       {
         name: "reviews",
-        to: "#reviews",
+        to: "reviews",
       },
       {
         name: "FAQs",
-        to: "#faqs",
+        to: "faqs",
       },
     ],
   },
@@ -25,15 +25,19 @@ export const footerInfo = [
     links: [
       {
         name: "dog walks",
-        to: "/services#dogwalks",
+        to: "#walk",
       },
       {
         name: "waste removal",
-        to: "/services#wasteremoval",
+        to: "#waste-removal",
       },
       {
         name: "pet sitting",
-        to: "/services#petsitting",
+        to: "#pet-sitting",
+      },
+      {
+        name: "let outs",
+        to: "#let-out",
       },
     ],
   },
@@ -251,5 +255,20 @@ export const servicesDetails = [
         "🔄 text and picture updates",
       ],
     },
+  },
+];
+
+export const navlinks = [
+  {
+    name: 'home',
+    to: '/',
+  },
+  {
+    name: 'services',
+    to: '/services',
+  },
+  {
+    name: 'contact',
+    to: '/contact',
   },
 ];

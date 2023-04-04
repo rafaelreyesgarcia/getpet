@@ -3,9 +3,29 @@ import { FaFacebook } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import logo from '../assets/logo.svg'
 import { footerInfo, neighborhoods } from '../constants'
+import { HashLink } from 'react-router-hash-link'
 
 const Footer = () => {
   const apiKey = import.meta.env.VITE_MAPS_KEY;
+
+  const headerHeight = 75;
+  function handleClick(sectionId) {
+    if (sectionId) {
+      const formattedId = sectionId.startsWith('#') ? sectionId.slice(1) : sectionId;
+      const section = document.getElementById(formattedId);
+      const offsetTop = section.offsetTop;
+      console.log(formattedId);
+      window.scrollTo({
+        top: offsetTop - headerHeight,
+        behavior: 'smooth',
+      });
+    } else {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    }
+  }
   return (
     <footer className='w-[80%] mx-auto pt-2'>
       <div className='bg-gradient-to-l from-primary to-secondary h-2 my-4 rounded-md'></div>
@@ -33,9 +53,21 @@ const Footer = () => {
               </h3>
               <ul>
                 {footerLink.links.map((link) => (
-                  <a href={link.to}>
-                    <li className='capitalize font-body'>{link.name}</li>
-                  </a>
+                  link.to.includes('#') ? (
+                    <HashLink
+                      to={`/services${link.to}`}
+                      scroll={() => handleClick(link.to)}
+                    >
+                      <li className='capitalize font-body'>{link.name}</li>
+                    </HashLink>
+                  ) : (
+                    <HashLink
+                      to={`/#${link.to}`}
+                      scroll={() => handleClick(link.to)}
+                    >
+                      <li className='capitalize font-body'>{link.name}</li>
+                    </HashLink>
+                  )
                 ))}
               </ul>
             </div>

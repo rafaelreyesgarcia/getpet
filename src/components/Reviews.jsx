@@ -20,7 +20,9 @@ export default function Reviews() {
   return (
     <section
     className="
-      flex flex-col justify-evenly items-center my-12"
+      flex flex-col justify-evenly items-center my-12
+    "
+    id='reviews'
     >
       <h2 className='font-heading font-semibold text-5xl text-center capitalize leading-normal tracking-wider mb-8'>
         Reviews

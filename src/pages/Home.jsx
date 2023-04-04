@@ -4,8 +4,13 @@ import Faq from '../components/Faq'
 import Hero from '../components/Hero'
 import Reviews from '../components/Reviews'
 import Services from '../components/Services'
+import { useEffect } from 'react'
 
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Hero />

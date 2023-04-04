@@ -57,7 +57,7 @@ const ServiceCard = ({id, type, img, duration, price, features, cheaper, index})
             </ul>
             <div className='self-center py-8'>
               <Link to='/contact'>
-                <button className='bg-gradient-to-l from-primary/90 to-secondary/90 text-white py-2 px-4 rounded-2xl uppercase text-lg hover:from-primary hover:to-secondary'>
+                <button className='bg-gradient-to-l from-primary/90 to-secondary/90 text-cream py-2 px-4 rounded-2xl uppercase text-lg hover:from-primary hover:to-secondary'>
                   book
                 </button>
               </Link>

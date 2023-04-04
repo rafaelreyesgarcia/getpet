@@ -22,7 +22,7 @@ const About = () => {
               My name is Kelley Smith and I offer pet services in Elmwood Park and the surrounding neighborhoods.
             </p>
             <p>
-              I am a trustworthy and honest person that stands by the saying: <q className='font-bold text-white p-2 my-4 block bg-gradient-to-l from-primary to-secondary rounded-md text-center'><em>treat others the way you want to be treated</em></q> I will respect your house and treat your pets like my own.</p>
+              I am a trustworthy and honest person that stands by the saying: <q className='font-bold text-cream p-2 my-4 block bg-gradient-to-l from-primary to-secondary rounded-md text-center'><em>treat others the way you want to be treated</em></q> I will respect your house and treat your pets like my own.</p>
             <p>
               Let your pet be the judge! Pets have an amazing sense detecting character and personality.🐶🐱💝
             </p>

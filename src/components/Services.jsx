@@ -24,6 +24,7 @@ const Services = () => {
       <h2 className="font-heading font-semibold text-5xl text-center capitalize leading-normal tracking-wider">
         services
       </h2>
+      {/* card */}
       <div
         className="
           flex flex-col gap-14 items-center
@@ -40,6 +41,7 @@ const Services = () => {
               w-[20rem] h-[470px]
               bg-primary/20 rounded-2xl
               shadow-md
+              transform hover:scale-105 duration-300
             '
           >
             <div className="h-[60%] w-full">
@@ -53,7 +55,7 @@ const Services = () => {
                 to={`/services#${service.id}`}
                 scroll={() => handleClick(service.id)}
                 className="
-                  uppercase font-heading text-white
+                  uppercase font-heading text-cream
                   p-2 rounded-lg cursor-pointer
                   bg-gradient-to-l from-primary/40 to-secondary/40
                 hover:from-primary hover:to-secondary

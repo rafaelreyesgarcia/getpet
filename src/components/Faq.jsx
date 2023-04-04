@@ -6,8 +6,12 @@ console.log(Faqs);
 const Faq = () => {
   const [activeIndex, setActiveIndex] = useState(-1);
   return (
-    <section className='
-    flex flex-col justify-evenly items-center mb-24'>
+    <section
+      className='
+        flex flex-col justify-evenly items-center mb-24
+      '
+      id='faqs'
+    >
       <h1 className='font-heading font-semibold text-5xl text-center capitalize leading-normal tracking-wider mb-8 mt-16'>
         Frequently asked questions
       </h1>
@@ -20,7 +24,7 @@ const Faq = () => {
             className={`flex justify-between items-center cursor-pointer py-4 px-6 bg-gradient-to-l from-primary to-secondary w-full flex-shrink-0 rounded-lg ${index === activeIndex ? 'rounded-bl-none rounded-br-none' : ''}`}
             onClick={() => setActiveIndex(index === activeIndex ? -1 : index)}
           >
-            <h3 className='font-heading capitalize text-white font-semibold text-xl'>{item.question}</h3>
+            <h3 className='font-heading capitalize text-cream font-semibold text-xl'>{item.question}</h3>
             <svg
               className={`w-6 h-6 ${
                 index === activeIndex ? 'transform rotate-180' : ''
