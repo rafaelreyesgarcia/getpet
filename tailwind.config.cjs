@@ -14,8 +14,8 @@ module.exports = {
         'primary-light': '#DFDFFD',
       },
       fontFamily: {
-        barlow: ['Barlow Condensed', 'sans-serif'],
-        montserrat: ['Montserrat', 'sans-serif'],
+        heading: ['Barlow Condensed', 'sans-serif'],
+        body: ['Montserrat', 'sans-serif'],
       },
     },
   },

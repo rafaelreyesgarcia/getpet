@@ -10,7 +10,7 @@ const Footer = () => {
     <footer className='w-[80%] mx-auto'>
       <div className='bg-gradient-to-l from-primary to-secondary h-2 my-4 rounded-md'></div>
 
-      <div className='flex justify-between items-center py-8 font-barlow text-3xl font-bold'>
+      <div className='flex justify-between items-center py-8 font-heading text-3xl font-bold'>
         <a href='#'><img src={logo} alt="logo" /></a>
         <Link to="tel:+17087699451">708-769-9451</Link>
         <Link to='https://www.facebook.com/Petservicesinelmwoodpark'>
@@ -23,13 +23,13 @@ const Footer = () => {
         <div className='flex gap-12'>
           {footerInfo.map((footerLink, i) => (
             <div className='flex flex-col'>
-              <h3 className='text-xl font-bold capitalize font-barlow pb-2'>
+              <h3 className='text-xl font-bold capitalize font-heading pb-2'>
                 {footerLink.title}
               </h3>
               <ul>
                 {footerLink.links.map((link) => (
                   <a href={link.to}>
-                    <li className='capitalize font-montserrat'>{link.name}</li>
+                    <li className='capitalize font-body'>{link.name}</li>
                   </a>
                 ))}
               </ul>
@@ -37,10 +37,10 @@ const Footer = () => {
           ))}
 
           <div>
-            <h3 className='text-xl font-bold capitalize font-barlow pb-2'>
+            <h3 className='text-xl font-bold capitalize font-heading pb-2'>
               hours
             </h3>
-            <ul className='font-montserrat'>
+            <ul className='font-body'>
               <li>Monday - Saturday</li>
               <li>10:00am - 4:00pm</li>
             </ul>
@@ -50,7 +50,7 @@ const Footer = () => {
         <div className='flex gap-4 items-center'>
           <ul
             className='
-              font-montserrat capitalize font-medium
+              font-body capitalize font-medium
               bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text
             '
           >

@@ -1,43 +1,5 @@
 import {useState} from 'react'
-
-const Faqs = [
-  {
-    question: 'how long are the walks?',
-    answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.',
-  },
-  {
-    question: 'what does a walk include?',
-    answer: 'consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.',
-  },
-  {
-    question: 'do you need keys to my house?',
-    answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. At, asperiores?',
-  },
-  {
-    question: 'how can i schedule a service?',
-    answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  },
-  {
-    question: 'what payments do you accept?',
-    answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  },
-  {
-    question: 'what is your cancellation policy?',
-    answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  },
-  {
-    question: 'can you medically assist pets?',
-    answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  },
-  {
-    question: 'do you work on the holidays?',
-    answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  },
-  {
-    question: 'what about walking in bad weather?',
-    answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  },
-];
+import { Faqs } from '../constants'
 
 console.log(Faqs);
 
@@ -45,27 +7,27 @@ const Faq = () => {
   const [activeIndex, setActiveIndex] = useState(-1);
   return (
     <section className='h-screen
-    flex flex-col justify-evenly items-center'>
-      <h1 className='font-heading text-2xl uppercase font-bold tracking-[0.3rem] text-center'>
+    flex flex-col justify-evenly items-center mb-24'>
+      <h1 className='font-heading font-semibold text-5xl text-center capitalize leading-normal tracking-wider mb-8'>
         Frequently asked questions
       </h1>
       { Faqs.map((item, index) => (
         <div
           key={index}
-          className="border border-gray-300 rounded-lg mb-4 w-[80%]"
+          className="mb-4 w-[80%]"
         >
           <div
-            className="flex justify-between items-center cursor-pointer py-4 px-6 bg-gray-100 w-full flex-shrink-0"
+            className={`flex justify-between items-center cursor-pointer py-4 px-6 bg-gradient-to-l from-primary to-secondary w-full flex-shrink-0 rounded-lg ${index === activeIndex ? 'rounded-bl-none rounded-br-none' : ''}`}
             onClick={() => setActiveIndex(index === activeIndex ? -1 : index)}
           >
-            <h3 className='font-heading capitalize text-[#000]'>{item.question}</h3>
+            <h3 className='font-heading capitalize text-white font-semibold text-xl'>{item.question}</h3>
             <svg
               className={`w-6 h-6 ${
                 index === activeIndex ? 'transform rotate-180' : ''
               }`}
               fill="none"
               viewBox="0 0 24 24"
-              stroke="black"
+              stroke="white"
             >
               <path
                 strokeLinecap="round"
@@ -76,7 +38,7 @@ const Faq = () => {
             </svg>
           </div>
           {index === activeIndex && (
-            <div className="px-6 pb-4">{item.answer}</div>
+            <div className="px-6 pb-4 border-t-0 border-r-2 border-l-2 border-b-2 border-primary rounded-bl-lg rounded-br-lg">{item.answer}</div>
           )}
         </div>
       ))}

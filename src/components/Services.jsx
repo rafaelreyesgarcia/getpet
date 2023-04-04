@@ -1,62 +1,66 @@
 import {Link} from "react-router-dom";
-
-const services = [
-  {
-    image: '/walking.png',
-    title: 'dog walking',
-    description: 'A walk around the neighborhood'
-  },
-  {
-    image: '/cleanup.png',
-    title: 'waste cleanups',
-    description: 'weekly pet waste removal '
-  },
-  {
-    image: '/sitting.png',
-    title: 'pet sitting',
-    description: 'vacation care at home'
-  }
-];
+import { services } from '../constants'
+import { HashLink } from 'react-router-hash-link'
 
 const Services = () => {
+
+  const headerHeight = 75;
+  function handleClick(sectionId) {
+    const section = document.getElementById(sectionId);
+    const offsetTop = section.offsetTop;
+    window.scrollTo({
+      top: offsetTop - headerHeight,
+      behavior: 'smooth',
+    });
+  }
+
   return (
     <section
       className="
-        pt-16
-        flex flex-col justify-evenly items-center"
+        pt-16 w-[80%] mx-auto
+        flex flex-col justify-evenly items-center
+      "
     >
-      <h1 className="font-heading font-bold tracking-[0.3rem] text-2xl uppercase">
+      <h2 className="font-heading font-semibold text-5xl text-center capitalize leading-normal tracking-wider">
         services
-      </h1>
+      </h2>
       <div
         className="
           flex flex-col gap-14 items-center
-          md:flex-row md:justify-around md:gap-0
-          w-full pb-8 mt-4"
+          w-full pb-8 mt-4
+          md:flex-row md:justify-around md:gap-6
+        "
       >
         {services.map((service) => (
           <div
             key={service.title}
             className='
-              flex flex-col justify-center items-center gap-4
+              flex flex-col items-center gap-4
               text-center
-              snap-start
-              bg-gray-300/20 rounded-2xl p-4'
+              w-[370px] h-[470px]
+              bg-primary/20 rounded-2xl
+              shadow-md
+            '
           >
-            <div className="w-52 h-52">
-              <img src={service.image} alt={service.title}/>
+            <div className="h-[60%] w-full">
+              <img src={service.img} alt={service.title} className="object-cover w-full h-full object-top rounded-tl-xl rounded-tr-xl"/>
             </div>
-            <h2 className="font-heading uppercase">{service.title}</h2>
-            <p className="font-body pb-2 ">{service.description}</p>
-            <button
-              className="
-                uppercase
-                p-2 rounded-lg
-                bg-gradient-to-l from-indigo-500/40 to-blue-500/40
-                hover:from-indigo-500 hover:to-blue-500"
-            >
-              <Link href="/services">learn more</Link>
-            </button>
+            <div className="flex flex-col items-center gap-4 w-[90%]">
+              <h2 className="font-heading font-semibold capitalize text-2xl">{service.title}</h2>
+              <p className="font-body pb-2 ">{service.description}</p>
+            </div>
+              <HashLink
+                to={`/services#${service.id}`}
+                scroll={() => handleClick(service.id)}
+                className="
+                  uppercase font-heading text-white
+                  p-2 rounded-lg cursor-pointer
+                  bg-gradient-to-l from-primary/40 to-secondary/40
+                hover:from-primary hover:to-secondary
+                "
+              >
+                learn more
+              </HashLink>
           </div>
         ))}
       </div>

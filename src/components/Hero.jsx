@@ -14,7 +14,7 @@ const Hero = () => {
         <div>
           <img src={logo} alt="logo" className='' />
         </div>
-        <h1 className='font-barlow font-semibold text-5xl text-center capitalize leading-normal tracking-wider'>
+        <h1 className='font-heading font-semibold text-5xl text-center capitalize leading-normal tracking-wider'>
           pet services in <span className='bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text'>elmwood park</span> <br />
           & <br />
           surrounding neighborhoods
@@ -24,7 +24,7 @@ const Hero = () => {
           {/* place-items-center shorthand for items-center justify-items-center */}
           <ul className='bg-primary-light p-2 h-full rounded-md grid grid-cols-3 grid-rows-2 gap-4 place-items-center '>
             {neighborhoods.map(neighborhood => (
-              <li className='font-montserrat capitalize text-lg'>{neighborhood}</li>
+              <li className='font-body capitalize text-lg font-semibold'>{neighborhood}</li>
             ))}
           </ul>
         </div>

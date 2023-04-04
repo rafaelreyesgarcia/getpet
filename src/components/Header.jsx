@@ -8,7 +8,7 @@ const Header = () => {
       className='
         flex justify-between items-center px-6 py-1
         bg-gradient-to-r from-primary to-secondary text-white
-        font-barlow font-semibold text-xl
+        font-heading font-semibold text-xl
         sticky top-0 shadow-md z-10'
     >
       {/* logo */}

@@ -11,11 +11,11 @@ const About = () => {
         '
       >
         <div className='w-full px-6 md:w-[500px] flex flex-col md:text-justify'>
-          <h2 className="font-barlow font-semibold text-5xl text-center capitalize leading-normal tracking-wider">
+          <h2 className="font-heading font-semibold text-5xl text-center capitalize leading-normal tracking-wider">
            <span className='text-xl'>🐶😄👋🏻</span>{" "}welcome!{" "}<span className='text-xl'>👋🏻🐾🐱</span>
           </h2>
           <br />
-          <div className='font-montserrat space-y-6'>
+          <div className='font-body space-y-6'>
             <p>
               My name is Kelley Smith and I offer pet services in Elmwood Park and the surrounding neighborhoods.
             </p>

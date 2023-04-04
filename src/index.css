@@ -16,4 +16,10 @@
     rounded-lg md:px-1
     bg-indigo-500/50
   }
+  .custom-button {
+    @apply bg-gradient-to-r from-primary/80 to-secondary/80 px-2 rounded-md cursor-pointer hover:from-primary hover:to-secondary
+  }
+  .custom-button-disabled {
+    @apply bg-gray-300 px-2 rounded-md cursor-not-allowed
+  }
 }
