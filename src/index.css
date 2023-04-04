@@ -22,4 +22,7 @@
   .custom-button-disabled {
     @apply bg-gray-300 px-2 rounded-md cursor-not-allowed
   }
+  .form-heading {
+    @apply block text-[1rem] font-heading font-medium text-white mb-2
+  }
 }

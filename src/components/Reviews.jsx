@@ -29,7 +29,7 @@ export default function Reviews() {
       <div className='px-10 relative group'>
         <div
           className='
-            bg-secondary/20 w-[20rem] h-[15rem] py-5 px-5 flex flex-col justify-between
+            bg-secondary/20 w-[18rem] h-[17rem] py-5 px-7 flex flex-col justify-between
             rounded-lg md:w-[40rem] shadow-md'
         >
           <p className='my-auto'><q><i>{reviews[currentIndex].description}</i></q></p>

@@ -1,7 +1,7 @@
 import Layout from './components/Layout'
 import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
-import Services from './pages/Services'
+import Services from './pages/ServicesPage'
 import Contact from './pages/Contact'
 
 function App() {

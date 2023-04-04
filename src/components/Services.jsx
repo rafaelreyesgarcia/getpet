@@ -37,7 +37,7 @@ const Services = () => {
             className='
               flex flex-col items-center gap-4
               text-center
-              w-[370px] h-[470px]
+              w-[20rem] h-[470px]
               bg-primary/20 rounded-2xl
               shadow-md
             '

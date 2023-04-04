@@ -24,11 +24,11 @@ const Header = () => {
         <Link to='/contact' className='uppercase'>Contact</Link>
       </div>
       {/* contact */}
-      <div className='flex items-center gap-2'>
-        <Link to='https://www.facebook.com/Petservicesinelmwoodpark'>
+      <div className='flex items-center gap-2 ml-4'>
+        <Link to='https://www.facebook.com/Petservicesinelmwoodpark' target='_blank'>
           <FaFacebook />
         </Link>
-        <Link to='tel:+17087699451'>
+        <Link to='tel:+17087699451' className='hidden sm:block'>
           708-769-9451
         </Link>
       </div>

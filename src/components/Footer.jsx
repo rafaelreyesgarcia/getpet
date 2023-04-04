@@ -7,19 +7,24 @@ import { footerInfo, neighborhoods } from '../constants'
 const Footer = () => {
   const apiKey = import.meta.env.VITE_MAPS_KEY;
   return (
-    <footer className='w-[80%] mx-auto'>
+    <footer className='w-[80%] mx-auto pt-2'>
       <div className='bg-gradient-to-l from-primary to-secondary h-2 my-4 rounded-md'></div>
 
-      <div className='flex justify-between items-center py-8 font-heading text-3xl font-bold'>
-        <a href='#'><img src={logo} alt="logo" /></a>
+      <div className='flex justify-between items-center py-8 font-heading text-lg md:text-3xl font-bold gap-4'>
+        <a href='#'><img src={logo} alt="logo" className='w-[15rem] hidden md:block' /></a>
         <Link to="tel:+17087699451">708-769-9451</Link>
-        <Link to='https://www.facebook.com/Petservicesinelmwoodpark'>
+        <Link to='https://www.facebook.com/Petservicesinelmwoodpark' target='_blank'>
           <FaFacebook />
         </Link>
         <Link to="mailto:kelleypetlover@gmail.com">kelleypetlover@gmail.com</Link>
       </div>
 
-      <div className='flex justify-between items-start'>
+      <div
+        className='
+          flex flex-col gap-5 justify-between items-center
+          md:flex-row md:gap-0
+        '
+      >
         <div className='flex gap-12'>
           {footerInfo.map((footerLink, i) => (
             <div className='flex flex-col'>
@@ -50,6 +55,7 @@ const Footer = () => {
         <div className='flex gap-4 items-center'>
           <ul
             className='
+              hidden lg:block
               font-body capitalize font-medium
               bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text
             '
@@ -60,8 +66,8 @@ const Footer = () => {
             ))}
           </ul>
           <iframe
+            className='md:w-[20rem]'
             height="200"
-            width='500'
             loading="lazy"
             allowFullScreen
             referrerPolicy="no-referrer-when-downgrade"

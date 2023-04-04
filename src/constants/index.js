@@ -70,7 +70,7 @@ export const services = [
   {
     id: 'let-out',
     title: "let out",
-    description: "a stretch in the backyard and go to the bathroom.",
+    description: "a stretch in the backyard and potty time.",
     img: "./src/assets/letout.jpg",
   },
 

@@ -6,9 +6,9 @@ console.log(Faqs);
 const Faq = () => {
   const [activeIndex, setActiveIndex] = useState(-1);
   return (
-    <section className='h-screen
+    <section className='
     flex flex-col justify-evenly items-center mb-24'>
-      <h1 className='font-heading font-semibold text-5xl text-center capitalize leading-normal tracking-wider mb-8'>
+      <h1 className='font-heading font-semibold text-5xl text-center capitalize leading-normal tracking-wider mb-8 mt-16'>
         Frequently asked questions
       </h1>
       { Faqs.map((item, index) => (
