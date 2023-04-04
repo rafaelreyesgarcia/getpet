@@ -8,8 +8,8 @@ const Header = () => {
       className='
         flex justify-between items-center px-6 py-1
         bg-gradient-to-r from-primary to-secondary text-white
-        font-heading font-semibold text-xl
-        sticky top-0 shadow-md z-10'
+        font-heading font-semibold text-sm md:text-xl
+        sticky top-0 shadow-md z-20'
     >
       {/* logo */}
       <div className='max-w-full w-[200px]'>
@@ -19,7 +19,9 @@ const Header = () => {
       </div>
       {/* navigation */}
       <div className='flex gap-8 items-center'>
-        <Link to='/' className='uppercase'>Home</Link>
+        <Link to='/' className='uppercase'>
+          Home
+        </Link>
         <Link to='/services' className='uppercase'>Services</Link>
         <Link to='/contact' className='uppercase'>Contact</Link>
       </div>

@@ -5,17 +5,19 @@ const About = () => {
     <section id='about' className='flex flex-col justify-center'>
       <div
         className='
-          flex flex-col gap-8 items-center justify-center
+          flex flex-col gap-8 items-center justify-between
           pt-8 mt-8
-          lg:flex-row md:px-5
+          lg:flex-row md:px-0
+          relative
         '
       >
-        <div className='w-full px-6 lg:w-[500px] flex flex-col md:text-justify'>
+        <div className='absolute bg-primary/40 w-[75%] h-[90%] top-12 left-0 bottom-0 z-0 hidden lg:block'></div>
+        <div className='w-full px-6 lg:w-[70%] flex flex-col md:text-justify z-10'>
           <h2 className="font-heading font-semibold text-5xl text-center capitalize leading-normal tracking-wider">
            <span className='text-xs md:text-xl'>🐶😄👋🏻</span>{" "}welcome!{" "}<span className='text-xs md:text-xl'>👋🏻🐾🐱</span>
           </h2>
           <br />
-          <div className='font-body space-y-6'>
+          <div className='font-body text-lg space-y-6'>
             <p>
               My name is Kelley Smith and I offer pet services in Elmwood Park and the surrounding neighborhoods.
             </p>
@@ -31,7 +33,7 @@ const About = () => {
         </div>
 
         <div className='w-[17rem] lg:w-[30rem] lg:h-[40rem] relative'>
-          <img src="/portrait.jpg" alt="" className='object-cover h-full w-full rounded-3xl px-4' />
+          <img src="/portrait.jpg" alt="" className='object-cover h-full w-full rounded-3xl px-0' />
         </div>
       </div>
     </section>

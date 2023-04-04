@@ -23,7 +23,7 @@ const ServiceCard = ({id, type, img, duration, price, features, cheaper, index})
         <h2 className='font-heading font-semibold text-5xl text-center capitalize leading-normal tracking-wider'>
           {type}
         </h2>
-        <div className='w-[470px] h-[450px] max-w-[20rem] lg:max-w-full relative bg-gradient-to-r from-primary to-secondary p-1 rounded-md'>
+        <div className='w-[470px] h-[32rem] max-w-[20rem] lg:max-w-full relative bg-gradient-to-r from-primary to-secondary p-1 rounded-md'>
           <div className='bg-primary-light h-full rounded-md flex flex-col justify-between'>
             {/* grid for header */}
             <div className='grid grid-cols-2 gap-4 font-semibold font-heading capitalize text-xl w-full mx-auto justify-items-center py-8 px-3'>

@@ -16,18 +16,19 @@ const Hero = () => {
           max-w-xs mx-auto
           mt-12
           md:max-w-full
+          md:pl-4
         '
       >
         <div>
           <img src={logo} alt="logo" className='hidden md:block' />
         </div>
-        <h1 className='font-heading font-semibold text-5xl text-center capitalize leading-normal tracking-wider'>
+        <h1 className='font-heading font-semibold text-5xl text-center capitalize tracking-wider'>
           pet services in <span className='bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text'>elmwood park</span> <br />
           & <br />
           surrounding neighborhoods
         </h1>
 
-        <div className='w-[20rem] h-[130px] relative bg-gradient-to-r from-primary to-secondary p-1 rounded-md'>
+        <div className='w-[20rem] lg:w-[30rem] h-[130px] relative bg-gradient-to-r from-primary to-secondary p-1 rounded-md'>
           {/* place-items-center shorthand for items-center justify-items-center */}
           <ul className='bg-primary-light p-2 h-full rounded-md grid grid-cols-3 grid-rows-2 gap-4 place-items-center '>
             {neighborhoods.map(neighborhood => (

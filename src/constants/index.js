@@ -209,7 +209,7 @@ export const servicesDetails = [
       duration: "10 minutes",
       price: "$10",
       features: [
-        "🐶 playtime in the backyard",
+        "🐶 quick potty break",
         "🚰 refresh water bowl (if needed)",
         "🥘 feeding not included",
         "🔄 text and picture updates",
@@ -220,7 +220,7 @@ export const servicesDetails = [
     id: 'waste-removal',
     type: "waste removal",
     img: "./src/assets/waste-removal.jpg",
-    duration: "as needed",
+    duration: "weekly",
     price: "$15 per visit",
     features: [
       "💩 thorough yard cleanup",

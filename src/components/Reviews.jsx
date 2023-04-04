@@ -30,7 +30,7 @@ export default function Reviews() {
         <div
           className='
             bg-secondary/20 w-[18rem] h-[17rem] py-5 px-7 flex flex-col justify-between
-            rounded-lg md:w-[40rem] shadow-md'
+            rounded-lg md:w-[40rem] sm:w-[30rem] shadow-md'
         >
           <p className='my-auto'><q><i>{reviews[currentIndex].description}</i></q></p>
           <div className='flex justify-between'>
