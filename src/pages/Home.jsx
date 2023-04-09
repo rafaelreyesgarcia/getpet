@@ -5,6 +5,7 @@ import Hero from '../components/Hero'
 import Reviews from '../components/Reviews'
 import Services from '../components/Services'
 import { useEffect } from 'react'
+import OldAbout from '../components/OldAbout'
 
 const Home = () => {
   useEffect(() => {
@@ -15,6 +16,7 @@ const Home = () => {
     <>
       <Hero />
       <About />
+      {/* <NewAbout /> */}
       <Services />
       <Reviews />
       <Faq />

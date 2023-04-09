@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-const ServiceCard = ({id, type, img, duration, price, features, cheaper, index}) => {
+const ServiceCard = ({type, duration, price, features, cheaper}) => {
   const [amount, setAmount] = useState(2);
   const max = 2;
   const min = 1;
@@ -20,7 +20,7 @@ const ServiceCard = ({id, type, img, duration, price, features, cheaper, index})
   return (
     <>
       <div className='flex flex-col justify-evenly items-center gap-8'>
-        <h2 className='font-heading font-semibold text-5xl text-center capitalize leading-normal tracking-wider'>
+        <h2 className='font-heading font-semibold text-5xl text-center capitalize leading-normal tracking-wider bg-secondary text-white px-4 rounded-md'>
           {type}
         </h2>
         <div className='w-[470px] h-[32rem] max-w-[20rem] lg:max-w-full relative bg-gradient-to-r from-primary to-secondary p-1 rounded-md'>
@@ -46,8 +46,9 @@ const ServiceCard = ({id, type, img, duration, price, features, cheaper, index})
               <p>💵price</p>
               <p>{amount == 2 ? price : cheaper.price }</p>
             </div>
+            {/*  */}
             <div className='bg-gradient-to-l from-primary to-secondary h-1 my-4 rounded-md w-[80%] mx-auto'></div>
-            <ul className='flex flex-col w-[80%] mx-auto space-y-4'>
+            <ul className='flex flex-col w-[80%] mx-auto space-y-4 text-xl'>
               {amount == 2 && features.map(feature => (
                 <li>{feature}</li>
               ))}

@@ -1,13 +1,19 @@
 import React from 'react'
 
-const About = () => {
+const OldAbout = () => {
   return (
-    <section id='about' className='md:flex md:flex-row h-auto'>
-      {/* description */}
-      <div className='flex flex-col gap-8 items-center justify-center bg-primary/30 w-full md:w-[70%]'>
-        <div className='w-full p-6 lg:w-[90%] flex flex-col md:text-justify'>
+    <section id='about' className='flex flex-col justify-center'>
+      <div
+        className='
+          flex flex-col gap-8 items-center justify-between
+          lg:flex-row md:px-0
+          relative
+        '
+      >
+        <div className='absolute bg-primary/40 w-[75%] h-[90%] top-12 left-0 bottom-0 z-0 hidden lg:block'></div>
+        <div className='w-full px-6 lg:w-[70%] flex flex-col md:text-justify z-10'>
           <h2 className="font-heading font-semibold text-5xl text-center capitalize leading-normal tracking-wider">
-           <span className='text-xs md:text-xl'>🐶🐾</span>{" "}welcome!{" "}<span className='text-xs md:text-xl'>🐾🐱</span>
+           <span className='text-xs md:text-xl'>🐶😄👋🏻</span>{" "}welcome!{" "}<span className='text-xs md:text-xl'>👋🏻🐾🐱</span>
           </h2>
           <br />
           <div className='font-body text-lg space-y-6'>
@@ -24,13 +30,13 @@ const About = () => {
             </p>
           </div>
         </div>
-      </div>
-      {/* image */}
-      <div className='w-full h-[20rem] md:h-auto md:w-[30%]'>
-        <img src="/portrait.jpg" alt="" className='object-cover h-full w-full px-0' />
+
+        <div className='w-[17rem] lg:w-[30rem] lg:h-[40rem] relative'>
+          <img src="/portrait.jpg" alt="" className='object-cover h-full w-full rounded-3xl px-0' />
+        </div>
       </div>
     </section>
   )
 }
 
-export default About
+export default OldAbout

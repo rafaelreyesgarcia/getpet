@@ -27,27 +27,29 @@ export default function Reviews() {
       <h2 className='font-heading font-semibold text-5xl text-center capitalize leading-normal tracking-wider mb-8'>
         Reviews
       </h2>
-      {/* card */}
-      <div className='px-10 relative group'>
-        <div
-          className='
-            bg-secondary/20 w-[18rem] h-[17rem] py-5 px-7 flex flex-col justify-between
-            rounded-lg md:w-[40rem] sm:w-[30rem] shadow-md'
-        >
-          <p className='my-auto'><q><i>{reviews[currentIndex].description}</i></q></p>
-          <div className='flex justify-between'>
-            <span className='bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text font-bold'>{reviews[currentIndex].name}</span>
-            <span>{reviews[currentIndex].stars}</span>
+      
+      <div className='bg-gradient-to-r from-primary to-secondary w-full'>
+        {/* card */}
+        <div className='px-10 relative group mx-auto lg:w-[60%] text-white'>
+          <div
+            className='
+              h-[17rem] py-5 px-7 flex flex-col justify-between
+          '
+          >
+            <p className='my-auto'><q><i>{reviews[currentIndex].description}</i></q></p>
+            <div className='flex justify-between'>
+              <span className='font-bold'>{reviews[currentIndex].name}</span>
+              <span>{reviews[currentIndex].stars}</span>
+            </div>
           </div>
-        </div>
-
-        <div className='hidden group-hover:block absolute top-[50%] -translate-y-[50%] left-2 text-2xl p-1 cursor-pointer'
-        >
-          <FaChevronLeft onClick={previous} />
-        </div>
-        <div className='hidden group-hover:block absolute top-[50%] -translate-y-[50%] right-2 text-2xl p-1 cursor-pointer'
-        >
-          <FaChevronRight onClick={next}/>
+          <div className='group-hover:block absolute top-[50%] -translate-y-[50%] left-2 text-2xl p-1 cursor-pointer'
+          >
+            <FaChevronLeft onClick={previous} />
+          </div>
+          <div className='group-hover:block absolute top-[50%] -translate-y-[50%] right-2 text-2xl p-1 cursor-pointer'
+          >
+            <FaChevronRight onClick={next}/>
+          </div>
         </div>
       </div>
       

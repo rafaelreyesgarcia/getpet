@@ -17,7 +17,7 @@ const Services = () => {
   return (
     <section
       className="
-        pt-16 w-[80%] mx-auto
+        pt-16 w-[90%] mx-auto
         flex flex-col justify-evenly items-center
       "
     >
