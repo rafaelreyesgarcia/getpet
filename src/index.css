@@ -25,4 +25,7 @@
   .form-heading {
     @apply block text-[1rem] font-heading font-medium text-white mb-2
   }
+  .contact-button {
+    @apply hover:bg-gradient-to-r hover:from-primary hover:to-secondary p-4 rounded-md
+  }
 }

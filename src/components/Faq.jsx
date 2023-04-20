@@ -18,7 +18,7 @@ const Faq = () => {
       { Faqs.map((item, index) => (
         <div
           key={index}
-          className="mb-4 w-[50%]"
+          className="mb-4 w-[70%] md:w-[50%]"
         >
           <div
             className={`flex justify-between items-center cursor-pointer py-4 px-6 bg-gradient-to-l from-primary to-secondary w-full flex-shrink-0 rounded-lg ${index === activeIndex ? 'rounded-bl-none rounded-br-none' : ''}`}

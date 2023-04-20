@@ -23,7 +23,7 @@ const ServiceCard = ({type, duration, price, features, cheaper}) => {
         <h2 className='font-heading font-semibold text-5xl text-center capitalize leading-normal tracking-wider bg-secondary text-white px-4 rounded-md'>
           {type}
         </h2>
-        <div className='w-[470px] h-[32rem] max-w-[20rem] lg:max-w-full relative bg-gradient-to-r from-primary to-secondary p-1 rounded-md'>
+        <div className='w-[470px] h-[34rem] max-w-[20rem] lg:max-w-full relative bg-gradient-to-r from-primary to-secondary p-1 rounded-md'>
           <div className='bg-primary-light h-full rounded-md flex flex-col justify-between'>
             {/* grid for header */}
             <div className='grid grid-cols-2 gap-4 font-semibold font-heading capitalize text-xl w-full mx-auto justify-items-center py-8 px-3'>
@@ -47,7 +47,7 @@ const ServiceCard = ({type, duration, price, features, cheaper}) => {
               <p>{amount == 2 ? price : cheaper.price }</p>
             </div>
             {/*  */}
-            <div className='bg-gradient-to-l from-primary to-secondary h-1 my-4 rounded-md w-[80%] mx-auto'></div>
+            <div className='bg-gradient-to-l from-primary to-secondary h-2 my-4 rounded-md w-[80%] mx-auto'></div>
             <ul className='flex flex-col w-[80%] mx-auto space-y-4 text-xl'>
               {amount == 2 && features.map(feature => (
                 <li>{feature}</li>
