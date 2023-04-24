@@ -23,10 +23,10 @@ const ServiceCard = ({type, duration, price, features, cheaper}) => {
         <h2 className='font-heading font-semibold text-5xl text-center capitalize leading-normal tracking-wider bg-secondary text-white px-4 rounded-md'>
           {type}
         </h2>
-        <div className='w-[470px] h-[34rem] max-w-[20rem] lg:max-w-full relative bg-gradient-to-r from-primary to-secondary p-1 rounded-md'>
+        <div className='w-[470px] h-[34rem] max-w-[22rem] lg:max-w-full relative bg-gradient-to-r from-primary to-secondary p-1 rounded-md'>
           <div className='bg-primary-light h-full rounded-md flex flex-col justify-between'>
             {/* grid for header */}
-            <div className='grid grid-cols-2 gap-4 font-semibold font-heading capitalize text-xl w-full mx-auto justify-items-center py-8 px-3'>
+            <div className='grid grid-cols-2 gap-4 font-semibold font-heading capitalize text-xl md:text-2xl w-full mx-auto justify-items-center py-8 px-3'>
               <p>⏱duration</p>
               <div className='flex gap-4 items-center text-center'>
                 {!cheaper ? (

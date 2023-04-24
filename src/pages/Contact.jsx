@@ -17,7 +17,7 @@ const Contact = () => {
         If you have any questions about any service, please don't hesitate to get in touch and I'll be more than happy to assist you.
       </p>
 
-      <div className='flex justify-between w-[70%] mx-auto gap-4'>
+      <div className='flex justify-center md:justify-between w-[70%] mx-auto gap-4'>
         <div className='flex flex-col gap-8 items-center justify-between py-8 font-heading text-3xl font-bold max-h-80'>
           <Link to="tel:+17087699451" className='contact-button'>708-769-9451</Link>
           <Link to='https://www.facebook.com/Petservicesinelmwoodpark' className='contact-button'>

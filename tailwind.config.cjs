@@ -9,12 +9,12 @@ module.exports = {
       colors: {
         'dark': '#252525',
         'cream': '#FFF8ED',
-        'primary': '#6366F1',
-        'secondary': '#3C81F6',
-        'primary-light': '#DFDFFD',
+        'primary': '#2a9d8f',
+        'secondary': '#264653',
+        'primary-light': '#d4e4e4',
       },
       fontFamily: {
-        heading: ['Barlow Condensed', 'sans-serif'],
+        heading: ['Rubik', 'sans-serif'],
         body: ['Montserrat', 'sans-serif'],
       },
     },

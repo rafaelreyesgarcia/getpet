@@ -13,7 +13,7 @@ const Services = () => {
     <section id='home'>
       <div className='flex flex-col w-[80%] mx-auto'>
         {servicesDetails.map((service, i) => (
-          <div className='flex justify-center md:justify-between my-8 gap-4' id={service.id}>
+          <div className='flex justify-center items-center md:justify-between my-8 gap-4' id={service.id}>
             {i % 2 === 0 ? (
               <>
                 <ServiceCard {...service} index={i} />
