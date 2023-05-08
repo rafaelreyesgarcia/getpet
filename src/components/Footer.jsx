@@ -8,7 +8,7 @@ import { HashLink } from 'react-router-hash-link'
 const Footer = () => {
   const apiKey = import.meta.env.VITE_MAPS_KEY;
 
-  const headerHeight = 75;
+  const headerHeight = 48;
   function handleClick(sectionId) {
     if (sectionId) {
       const formattedId = sectionId.startsWith('#') ? sectionId.slice(1) : sectionId;
