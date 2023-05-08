@@ -3,8 +3,24 @@
 import { servicesDetails } from '../constants';
 import ServiceCard from './ServiceCard';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 
-const Services = () => {
+const Services = ({scrollToId}) => {
+  const router = useRouter();
+
+  useEffect(() => {
+    if (scrollToId) {
+      const element = document.getElementById(scrollToId);
+      if(element) {
+        const headerHeight = 48;
+        window.scrollTo({
+          top: element.offsetTop - headerHeight,
+          behavior: 'smooth',
+        });
+      }
+    }
+  }, [scrollToId]);
 
   return (
     <section id='home'>

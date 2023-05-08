@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import { FaFacebook } from 'react-icons/fa'
 import Link from 'next/link'
@@ -6,7 +8,7 @@ import { footerInfo, neighborhoods } from './constants'
 const Footer = () => {
   const apiKey = process.env.GOOGLE_API;
 
-  // const headerHeight = 75;
+  const headerHeight = 48;
   // function handleClick(sectionId) {
   //   if (sectionId) {
   //     const formattedId = sectionId.startsWith('#') ? sectionId.slice(1) : sectionId;
@@ -24,6 +26,23 @@ const Footer = () => {
   //     });
   //   }
   // }
+
+  const handleScroll = (e) => {
+    e.preventDefault();
+
+    const href = e.currentTarget.href;
+    console.log(href);
+    const targetId = href.replace(/.*\#/, "");
+    console.log(targetId);
+
+    const elem = document.getElementById(targetId);
+    console.log(elem);
+
+    window.scrollTo({
+      top: elem?.offsetTop - headerHeight,
+      behavior: 'smooth',
+    });
+  }
 
   return (
     <footer className='w-[80%] mx-auto pt-2'>
@@ -55,7 +74,13 @@ const Footer = () => {
                   // services page links
                   link.to.includes('#') ? (
                     <Link
-                      href={`/services${link.to}`}
+                      // href={`/services${link.to}`}
+                      href={{
+                        pathname: '/services',
+                        query: {scrollToId: `${link.to}`}
+                      }}
+                      scroll={false}
+                      
                     >
                       <li className='capitalize font-body'>{link.name}</li>
                     </Link>
@@ -63,12 +88,14 @@ const Footer = () => {
                   ) : link.name === 'home' ? (
                     <Link
                       href={`/`}
+                      onClick={handleScroll}
                     >
                       <li className='capitalize font-body'>{link.name}</li>
                     </Link>
                   ) : (
                     <Link
                       href={`/#${link.to}`}
+                      onClick={handleScroll}
                     >
                       <li className='capitalize font-body'>{link.name}</li>
                     </Link>
