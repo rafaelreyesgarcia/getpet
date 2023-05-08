@@ -2,6 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .gradient-link {
+    @apply uppercase rounded-lg
+    px-2
+    bg-gradient-to-l from-indigo-500/40 to-blue-500/40
+  hover:from-indigo-500 hover:to-blue-500
+  }
+  .item {
+    @apply capitalize
+    rounded-lg md:px-1
+    bg-indigo-500/50
+  }
+  .custom-button {
+    @apply bg-gradient-to-r from-primary/80 to-secondary/80 px-2 rounded-md cursor-pointer hover:from-primary hover:to-secondary
+  }
+  .custom-button-disabled {
+    @apply bg-gray-300 px-2 rounded-md cursor-not-allowed
+  }
+  .form-heading {
+    @apply block text-[1rem] font-heading font-medium text-white mb-2
+  }
+  .contact-button {
+    @apply hover:bg-gradient-to-r hover:from-primary hover:to-secondary p-4 rounded-md
+  }
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -10,18 +36,12 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-rgb: 25, 25, 25;
+    --background-hex: #FFF8ED;
   }
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: var(--background-hex);
 }
