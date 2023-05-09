@@ -135,41 +135,37 @@ export const Faqs = [
   {
     question: "how long are the walks?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
+      "The standard walk is 30 minutes and a shorter walk lasts 20 minutes. I'm open to determine the optimal length of the walk that you are more comfortable with.",
   },
   {
     question: "what does a walk include?",
     answer:
-      "consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
+      "The walk typically consist in exploring the surroundings, letting your pets sniff around to get mentally stimulated as well as bathroom breaks. I'm consistently monitoring your pet's behavior and surroundings to ensure their safety and wellbeing. I avoid busy or hazardous areas and take precautions to prevent your pet from becoming overheated or exhausted.",
   },
   {
     question: "do you need keys to my house?",
     answer:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. At, asperiores?",
+      "Yes, I need a copy of your house key. Rest assured that I will keep it safe at all times. I'm ok with working with other access methods like security codes.",
   },
   {
     question: "how can i schedule a service?",
-    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    answer: "You can schedule a service by phone, through my facebook page or by email. Simply let me know the type of service you need, dates and times you require the service and any other relevant details. I will work with your specific requirements and get in touch as soon as possible.",
   },
   {
     question: "what payments do you accept?",
-    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    answer: "I accept cash and zelle transfers only. Cash is preferred. I don't accept checks or credit card payments at this time.",
   },
   {
     question: "what is your cancellation policy?",
-    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
-  {
-    question: "can you medically assist pets?",
-    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    answer: "I understand that unexpected events can happen and will work with you to reschedule or cancel the service as needed. There's no cancellation fee with more than 24 hours notice. same day cancellations will have a fee of $10.",
   },
   {
     question: "do you work on the holidays?",
-    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    answer: "My availability may be limited on holidays but I do offer services on holidays with prior arrangement.",
   },
   {
     question: "what about walking in bad weather?",
-    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    answer: "I will walk your dogs in light rain or snow as long as the conditions are not hazardous and the pet is comfortable. I will always ask you if you're comfortable with rescheduling a service due to heavy rain, extreme heat or icy conditions.",
   },
 ];
 
