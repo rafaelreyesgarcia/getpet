@@ -74,13 +74,7 @@ const Footer = () => {
                   // services page links
                   link.to.includes('#') ? (
                     <Link
-                      // href={`/services${link.to}`}
-                      href={{
-                        pathname: '/services',
-                        query: {scrollToId: `${link.to}`}
-                      }}
-                      scroll={false}
-                      
+                      href={`/services${link.to}`}
                     >
                       <li className='capitalize font-body'>{link.name}</li>
                     </Link>
