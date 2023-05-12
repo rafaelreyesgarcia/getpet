@@ -5,7 +5,7 @@ import About from './About'
 
 const Hero = () => {
   return (
-    <section id='home' className='flex items-center justify-center lg:justify-start bg-cover bg-center h-screen' style={{backgroundImage: 'url(./src/assets/hero.jpg)'}}>
+    <section id='home' className='flex items-center justify-center lg:justify-start bg-cover bg-center h-screen' style={{backgroundImage: 'url(./hero.jpg)'}}>
       {/* <div className='h-[630px] w-full relative hidden md:block'>
         <img src='./src/assets/hero.jpg' alt="dogs" className='object-cover h-full w-[100%] transform scale-x-[-1] z-0'/>
       </div> */}
