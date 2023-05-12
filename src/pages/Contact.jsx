@@ -27,7 +27,7 @@ const Contact = () => {
         </div>
 
         <div className="h-[400px] w-[40rem] hidden md:flex">
-          <img src=".contact.jpg" alt="" className='object-cover w-full h-full' />
+          <img src="./contact.jpg" alt="" className='object-cover w-full h-full' />
         </div>
       </div>
     </section>
