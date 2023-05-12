@@ -57,25 +57,25 @@ export const services = [
     id: 'walk',
     title: "dog walking",
     description: "A 30 min walk around the neighborhood.",
-    img: "./src/assets/walking.jpg",
+    img: "./walking.jpg",
   },
   {
     id: 'waste-removal',
     title: "waste removal",
     description: "On demand waste removal.",
-    img: "./src/assets/poop.jpg",
+    img: "./poop.jpg",
   },
   {
     id: 'pet-sitting',
     title: "pet sitting",
     description: "Vacation care at the comfort of home.",
-    img: "./src/assets/pet-sitting.jpg",
+    img: "./pet-sitting.jpg",
   },
   {
     id: 'let-out',
     title: "let out",
     description: "a stretch in the backyard and potty time.",
-    img: "./src/assets/letout.jpg",
+    img: "./letout.jpg",
   },
 
 ];
@@ -173,7 +173,7 @@ export const servicesDetails = [
   {
     id: 'walk',
     type: "dog walk",
-    img: "./src/assets/dog-walking.jpg",
+    img: "./dog-walking.jpg",
     duration: "30 minutes",
     price: "$20",
     features: [
@@ -196,7 +196,7 @@ export const servicesDetails = [
   {
     id: 'let-out',
     type: "let out",
-    img: "./src/assets/letout.jpg",
+    img: "./letout.jpg",
     duration: "30 minutes",
     price: "$15",
     features: [
@@ -219,7 +219,7 @@ export const servicesDetails = [
   {
     id: 'waste-removal',
     type: "waste removal",
-    img: "./src/assets/waste-removal.jpg",
+    img: "./waste-removal.jpg",
     duration: "weekly",
     price: "$15 per visit",
     features: [
@@ -232,7 +232,7 @@ export const servicesDetails = [
   {
     id: 'pet-sitting',
     type: "pet sitting",
-    img: "./src/assets/pets.jpg",
+    img: "./pets.jpg",
     duration: "day/night",
     price: "$110",
     features: [
